@@ -6,13 +6,18 @@ import time
 from collections import deque
 from typing import Dict, List
 
+# Load environment variables from .env file
+load_dotenv()
+
 #Set API Keys
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_ENVIRONMENT = "us-east4-gcp" #Pinecone Environment (eg. "us-east1-gcp")
 
-#Set Variables
-YOUR_TABLE_NAME = "test-table"
+#Set Pinecone Variables
+YOUR_TABLE_NAME = os.getenv("PINECONE_TABLE_NAME")
+PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT")
+
+#Set Agent Variables
 OBJECTIVE = "Solve world hunger."
 YOUR_FIRST_TASK = "Develop a task list."
 
@@ -137,4 +142,4 @@ while True:
         add_task(new_task)
     prioritization_agent(this_task_id)
 
-time.sleep(1)  # Sleep before checking the task list again
+    time.sleep(1)  # Sleep before checking the task list again
