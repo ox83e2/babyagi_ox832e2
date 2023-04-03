@@ -1,12 +1,14 @@
 import openai
 import pinecone
+import os
+from dotenv import load_dotenv
 import time
 from collections import deque
 from typing import Dict, List
 
 #Set API Keys
-OPENAI_API_KEY = ""
-PINECONE_API_KEY = ""
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENVIRONMENT = "us-east1-gcp" #Pinecone Environment (eg. "us-east1-gcp")
 
 #Set Variables
