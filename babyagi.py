@@ -18,7 +18,7 @@ YOUR_TABLE_NAME = os.getenv("PINECONE_TABLE_NAME")
 PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT")
 
 #Set Agent Variables
-OBJECTIVE = "Solve world hunger."
+OBJECTIVE = "Solve the AI Alignment problem."
 YOUR_FIRST_TASK = "Develop a task list."
 
 #Print OBJECTIVE
